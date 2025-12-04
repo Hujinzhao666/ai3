@@ -473,7 +473,7 @@
                             {/* Comments Preview */}
                             <div className="bg-white rounded-2xl p-4 shadow-sm mb-6">
                                 <div className="flex justify-between items-center mb-3">
-                                    <h3 className="font-bold">磕友评价 (128)</h3>
+                                    <h3 className="font-bold">嗑友评价 (128)</h3>
                                     <span className="text-xs text-stone-400">查看全部 &gt;</span>
                                 </div>
                                 <div className="flex items-start space-x-3 text-sm">
@@ -688,7 +688,7 @@
             const { currentScreen, showToast } = useContext(AppContext);
             const { user } = currentScreen.params;
             const [msgs, setMsgs] = useState([
-                { me: false, text: user.isAI ? "你好呀！我是你的AI磕学顾问，关于坚果的营养、搭配、选购问题都可以问我哦～ 🌰✨" : "你好呀！" }
+                { me: false, text: user.isAI ? "你好呀！我是你的AI嗑学顾问，关于坚果的营养、搭配、选购问题都可以问我哦～ 🌰✨" : "你好呀！" }
             ]);
             const [input, setInput] = useState("");
             const [isTyping, setIsTyping] = useState(false);
@@ -707,7 +707,7 @@
                 if (user.isAI) {
                     setIsTyping(true);
                     const prompt = userMsg;
-                    const systemPrompt = "你是一个“磕”APP的AI磕学顾问，名字叫“坚果小博士”。你的语气幽默风趣，喜欢使用Emoji。你非常了解各种坚果的营养价值、食用禁忌和搭配方法。请简短回答用户的问题。";
+                    const systemPrompt = "你是一个“嗑”APP的AI磕学顾问，名字叫“坚果小博士”。你的语气幽默风趣，喜欢使用Emoji。你非常了解各种坚果的营养价值、食用禁忌和搭配方法。请简短回答用户的问题。";
                     
                     // 使用 DeepSeek 接口
                     const responseText = await callDeepSeek(prompt, systemPrompt);
@@ -768,7 +768,7 @@
                             
                             <div className="flex-1">
                                 <h2 className="text-2xl font-bold text-stone-800 font-[ZCOOL KuaiLe]">松鼠大王</h2>
-                                <p className="text-xs text-stone-500 mt-1 bg-white/50 inline-block px-2 py-1 rounded-full">磕龄：312天</p>
+                                <p className="text-xs text-stone-500 mt-1 bg-white/50 inline-block px-2 py-1 rounded-full">嗑龄：312天</p>
                             </div>
                             <Icons.Settings className="w-6 h-6 text-stone-600" onClick={() => showToast("设置")} />
                         </div>
@@ -793,7 +793,7 @@
                         <div className="bg-white rounded-2xl p-4 shadow-sm">
                             <h3 className="font-bold text-stone-800 mb-4 px-2">常用功能</h3>
                             <div className="grid grid-cols-4 gap-y-6">
-                                {['磕学档案', '坚果许愿', '邻里分享', '宠物专区', '客服中心', '地址管理', '帮助', '关于'].map((item, idx) => (
+                                {['嗑学档案', '坚果许愿', '邻里分享', '宠物专区', '客服中心', '地址管理', '帮助', '关于'].map((item, idx) => (
                                     <div key={item} className="flex flex-col items-center" onClick={() => showToast(item)}>
                                         <div className={`w-10 h-10 rounded-full flex items-center justify-center mb-2 ${idx % 2 === 0 ? 'bg-orange-50 text-orange-500' : 'bg-stone-50 text-stone-500'}`}>
                                             <Icons.Leaf className="w-5 h-5" />
@@ -833,8 +833,8 @@
                         <div className="flex items-center justify-between relative z-10">
                             <div>
                                 <div className="flex items-center space-x-2 mb-1"><span className="bg-white/20 text-xs px-2 py-0.5 rounded-lg backdrop-blur-sm">今日一磕</span></div>
-                                <h3 className="text-2xl font-bold mb-1 font-[ZCOOL KuaiLe]">磕碧根果</h3>
-                                <p className="text-sm opacity-90 flex items-center"><span className="mr-1">🧠</span> 补充Omega-3</p>
+                                <h3 className="text-2xl font-bold mb-1 font-[ZCOOL KuaiLe]">嗑碧根果</h3>
+                                <p className="text-sm opacity-90 flex items-center"><span className="mr-1">🧠</span> 补充Omega-3（勿点）</p>
                             </div>
                             <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-md border border-white/30 text-3xl">🌰</div>
                         </div>
@@ -859,8 +859,8 @@
 
                     <div className="mt-4">
                         <div className="flex space-x-6 border-b border-stone-200 pb-2 mb-4">
-                            <span className="text-lg font-bold text-stone-800 border-b-4 border-orange-500 rounded-sm">磕学干货</span>
-                            <span className="text-lg font-medium text-stone-400">附近磕友</span>
+                            <span className="text-lg font-bold text-stone-800 border-b-4 border-orange-500 rounded-sm">嗑学干货</span>
+                            <span className="text-lg font-medium text-stone-400">附近嗑友</span>
                         </div>
                         <div className="grid grid-cols-2 gap-3">
                             {MOCK_DB.feed.map((item) => (
@@ -1045,7 +1045,7 @@
                         <div className="leaf"><Icons.Leaf /></div>
                         <div className="relative z-10 p-6 pt-12 text-center text-white">
                             <h1 className="text-3xl font-bold mb-1 font-[ZCOOL KuaiLe]">今日挑战：手剥松子</h1>
-                            <p className="text-sm opacity-90">已坚持 12 天 | 战胜 88% 磕友</p>
+                            <p className="text-sm opacity-90">已坚持 12 天 | 战胜 88% 嗑友</p>
                         </div>
                     </div>
 
@@ -1069,7 +1069,7 @@
                     </div>
 
                     <div className="mt-8 px-6 grid grid-cols-2 gap-4">
-                         {[{t:"磕技PK赛", i:"🏆", c:"bg-orange-50"}, {t:"7天挑战", i:"📅", c:"bg-blue-50"}, {t:"勋章墙", i:"🎖️", c:"bg-purple-50"}, {t:"兑换商城", i:"🎁", c:"bg-green-50"}].map(item => (
+                         {[{t:"嗑技PK赛", i:"🏆", c:"bg-orange-50"}, {t:"7天挑战", i:"📅", c:"bg-blue-50"}, {t:"勋章墙", i:"🎖️", c:"bg-purple-50"}, {t:"兑换商城", i:"🎁", c:"bg-green-50"}].map(item => (
                              <div key={item.t} onClick={() => showToast(`进入 ${item.t}`)} className={`${item.c} p-4 rounded-2xl flex flex-col items-center justify-center border border-white shadow-sm active:scale-95 transition-transform`}>
                                  <div className="text-3xl mb-2">{item.i}</div>
                                  <span className="font-bold text-stone-700">{item.t}</span>
@@ -1096,7 +1096,7 @@
                     <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-br from-orange-400 via-orange-500 to-amber-600">
                         <div className="leaf"><Icons.Leaf /></div>
                         <div className="text-center animate-bounce mb-8">
-                            <span className="text-8xl font-black text-amber-950 font-[ZCOOL KuaiLe]">磕</span>
+                            <span className="text-8xl font-black text-amber-950 font-[ZCOOL KuaiLe]">嗑</span>
                         </div>
                         <button onClick={() => setShowSplash(false)} className="bg-amber-950 text-white px-8 py-2 rounded-full shadow-xl">进入社区</button>
                     </div>
@@ -1145,8 +1145,8 @@
                         <div className="fixed bottom-0 w-full max-w-[480px] bg-white/95 backdrop-blur border-t border-orange-100 pb-safe pt-2 px-2 shadow-[0_-4px_10px_rgba(0,0,0,0.05)] z-40 flex justify-around items-end">
                             {[
                                 {id: 'home', l: '首页', i: Icons.Home},
-                                {id: 'social', l: '磕友圈', i: Icons.MessageCircle},
-                                {id: 'checkin', l: '今日一磕', i: Icons.Calendar, special: true},
+                                {id: 'social', l: '嗑友圈', i: Icons.MessageCircle},
+                                {id: 'checkin', l: '今日一嗑', i: Icons.Calendar, special: true},
                                 {id: 'store', l: '商城', i: Icons.ShoppingBag},
                                 {id: 'profile', l: '我的', i: Icons.User}
                             ].map(t => {
